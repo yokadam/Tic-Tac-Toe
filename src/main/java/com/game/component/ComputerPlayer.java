@@ -20,7 +20,7 @@ public class ComputerPlayer extends Player {
     @Override
     public void makeMove(Scanner sc) {
 
-        System.out.println(this.getName() + "'s move -> ");
+        System.out.print(this.getName() + "'s move -> ");
         Board instance = Board.getInstance();
         Character[][] board = instance.getBoard();
         int size = instance.getBoard().length;
@@ -33,6 +33,7 @@ public class ComputerPlayer extends Player {
             column = generator.nextInt(size);
         } while (board[row][column] != ' ');
 
+        System.out.println(row + "," + column);
         board[row][column] = this.getSign().charAt(0);
     }
 }
