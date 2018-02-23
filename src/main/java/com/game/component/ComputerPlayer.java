@@ -33,7 +33,9 @@ public class ComputerPlayer extends Player {
             column = generator.nextInt(size);
         } while (board[row][column] != ' ');
 
-        System.out.println(row + "," + column);
+        // array indexes are zero based so in order to match console position added 1 to row and column.
+        System.out.println((row + 1) + "," + (column + 1));
+
         board[row][column] = this.getSign().charAt(0);
     }
 }
