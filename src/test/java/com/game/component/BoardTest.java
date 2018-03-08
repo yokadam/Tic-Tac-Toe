@@ -117,7 +117,7 @@ public class BoardTest {
                 {'X', 'O', 'C'}
         };
         boardInstance.setBoard(board);
-        assertFalse(boardInstance.checkForWin());
+        assertTrue(boardInstance.checkForDraw());
     }
 
     @Test
@@ -128,6 +128,6 @@ public class BoardTest {
                 {'X', 'O', 'C'}
         };
         boardInstance.setBoard(board);
-        assertFalse(boardInstance.checkForWin());
+        assertFalse(boardInstance.checkForDraw());
     }
 }

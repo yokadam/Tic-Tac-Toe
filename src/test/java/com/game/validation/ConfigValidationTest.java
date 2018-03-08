@@ -2,6 +2,7 @@ package com.game.validation;
 
 import com.game.data.PropertiesTestData;
 import org.junit.Test;
+
 import java.util.Properties;
 
 import static org.junit.Assert.assertFalse;
@@ -61,7 +62,7 @@ public class ConfigValidationTest {
     }
 
     @Test
-    public void validate_validConfigFile_validationFails() {
+    public void validate_validConfigFile_validationSucceed() {
         Properties prop = PropertiesTestData.getPropertiesFromValidConfigFile();
         boolean isValid = ConfigValidation.validate(prop);
 
